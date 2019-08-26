@@ -1,1 +1,9 @@
-<div class="site-logo">Air Pong</div>
+<div class="site-logo"></div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('<%= image_path "banner.jpg" %>');">
+  <div class="container">
+    <h1>Air Pong brings <strong>fun</strong> to <strong>everywhere, anytime!</strong>!</h1>
+    <p>Change your life and start party!</p>
+    <%= link_to "Reserve a Table", "listings_index_path", class: "btn btn-ghost" %>
+  </div>
+</div>
