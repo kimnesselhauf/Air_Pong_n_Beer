@@ -1,5 +1,6 @@
 require 'faker'
-
+Listing.destroy_all
+User.destroy_all
 
 puts " creating 10 users..."
 10.times do |n|
@@ -19,11 +20,11 @@ users = User.all
 puts " creating 10 faker listings..."
 10.times do
   listing = Listing.new(
-    image: Faker::LoremFlickr.image(size: "50x60", search_terms: ['beer', 'beerpong']),
+    remote_photo_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['beer', 'beerpong']),
     title: "#{Faker::WorldCup.stadium} - beerpong table",
     description: Faker::Beer.style,
     price: "#{Faker::Number.decimal(l_digits: 2)}$",
-    rating: [1..5].sample,
+    rating: rand(1..5),
     user: users.sample
   )
   listing.save!
