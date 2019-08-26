@@ -4,7 +4,7 @@
 <% @listings.each do |listing| %>
   <div>
     <img src="<%= listing.photo %>" alt="#">
-    <h2><%= listing.title %></h2>
+    <h2><%= link_to listing.title, listing %></h2>
     <p><%= listing.description %></p>
     <p><%= listing.price %></p>
   </div>
