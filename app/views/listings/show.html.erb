@@ -1,2 +1,6 @@
-<h1>Listings#show</h1>
-<p>Find me in app/views/listings/show.html.erb</p>
+<h1><%= @listing.title %></h1>
+<img src="<%= @listing.photo %>" alt="#">
+<p><%= @listing.description %></p>
+<p><%= @listing.price %></p>
+<br>
+<%= link_to 'View All', listings_path %>
