@@ -1,2 +1,62 @@
-<h1>Listings#new</h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+<h1>Create your new Listing here</h1>
+
+
+<%= simple_form_for [@user, @listing] do |l| %>
+<%= l.label :name %>
+<%= l.text_field :title %>
+<br>
+<%= l.label :description %>
+<%= l.text_field :description %>
+<br>
+<%= l.label :price %>
+<%= l.text_field :price %>
+<br>
+<%= l.input :photo %>
+<br>
+<%= l.submit %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% end %>
+
+
+
+
+
