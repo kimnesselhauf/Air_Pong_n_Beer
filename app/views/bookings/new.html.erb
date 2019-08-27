@@ -1,0 +1,11 @@
+<h1>Make a booking</h1>
+
+
+<%= simple_form_for [@listing, @booking] do |l| %>
+<%= l.date_select :pickup %>
+<%= l.time_select :pickup, :ignore_date => true %>
+<br>
+<%= l.input :return, as: :date, html5: true %>
+<br>
+<%= l.submit %>
+<% end %>

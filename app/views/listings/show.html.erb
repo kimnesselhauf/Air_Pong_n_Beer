@@ -4,3 +4,16 @@
 <p><%= @listing.price %></p>
 <br>
 <%= link_to 'View All', listings_path %>
+<br>
+
+<div>
+  <h1>Make a booking</h1>
+
+  <%= simple_form_for [@listing, @booking] do |l| %>
+  <%= l.input :pickup, as: :date, html5: true %>
+  <br>
+  <%= l.input :return, as: :date, html5: true %>
+  <br>
+  <%= l.submit %>
+  <% end %>
+</div>
