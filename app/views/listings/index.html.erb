@@ -1,11 +1,17 @@
-<h1>Tables</h1>
-
-
-<% @listings.each do |listing| %>
-  <div>
-    <img src="<%= listing.photo %>" alt="#">
-    <h2><%= link_to listing.title, listing %></h2>
-    <p><%= listing.description %></p>
-    <p><%= listing.price %></p>
+<div class="bg-light">
+  <h1 class="listing-title">Tables</h1>
+  <div class="container">
+    <% @listings.each do |listing| %>
+      <div class="card-trip">
+        <img src="<%= listing.photo %>" alt="#">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= link_to listing.title, listing %></h2>
+            <p><%= listing.description %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= listing.price %></h2>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
