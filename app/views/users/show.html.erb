@@ -2,7 +2,7 @@
 
 
 <% if @user.photo.nil? %>
-   <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="#">
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="#">
   <% else %>
     <%= image_tag @user.photo_url%>
   <% end %>
