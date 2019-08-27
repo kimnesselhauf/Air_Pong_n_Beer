@@ -18,6 +18,12 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 28px 0px;
+
+  &:hover {
+    transition: all .5s ease;
+    position: relative;
+    top: -6px;
+  }
 }
 
 .card-trip > img {
