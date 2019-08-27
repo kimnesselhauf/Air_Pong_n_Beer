@@ -2,10 +2,10 @@
 
 
 <%= simple_form_for [@listing, @booking] do |l| %>
-<%= l.date_select :pickup %>
-<%= l.time_select :pickup, :ignore_date => true %>
+<%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
 <br>
-<%= l.input :return, as: :date, html5: true %>
+<%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
 <br>
 <%= l.submit %>
 <% end %>
+

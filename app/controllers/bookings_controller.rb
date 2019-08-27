@@ -19,6 +19,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:pickup, :return, :listing_id)
+    params.require(:booking).permit(:pickup_on, :return_on, :listing_id)
   end
 end
