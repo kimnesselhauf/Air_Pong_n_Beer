@@ -16,16 +16,26 @@
   font-weight: 300;
 }
 
+.container {
+  text-align: center;
+}
+
 .banner {
   background-size: cover;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
   background-position: center;
   padding: 150px 0;
   height: 100vh;
 }
 
+span {
+  color: #e01919;
+  font-weight: 800px;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.3);
+}
+
 .banner h1 {
-  margin: 0;
+  margin-top: 52px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   font-size: 32px;

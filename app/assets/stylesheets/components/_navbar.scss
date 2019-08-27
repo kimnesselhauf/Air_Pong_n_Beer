@@ -2,17 +2,32 @@
   justify-content: space-between;
   background: white;
   font-family: 'Cabin Sketch', cursive;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .nav-link {
+    display: inline;
+    font-family: 'Cabin Sketch', cursive;
+  }
+
+  &.navbar-transparent {
+    background-color: transparent;
+
+    img {
+      filter: invert(1);
+    }
+
+    .nav-link {
+      filter: invert(1);
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 
-.nav-link {
-  display: inline;
-  font-family: 'Cabin Sketch', cursive;
-}
