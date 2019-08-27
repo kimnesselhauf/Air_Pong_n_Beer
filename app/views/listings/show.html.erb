@@ -1,6 +1,13 @@
-<h1><%= @listing.title %></h1>
-<img src="<%= @listing.photo %>" alt="#">
-<p><%= @listing.description %></p>
-<p><%= @listing.price %></p>
-<br>
-<%= link_to 'View All', listings_path %>
+<div class="bg-light">
+  <h1 class="listing-title"><%= @listing.title %></</h1>
+    <div class="card-product">
+      <img src="<%= @listing.photo %>" alt="#">
+      <div class="card-product-infos">
+        <h2><%= @listing.description %></h2>
+        <p><%= @listing.price %></p>
+      </div>
+    </div>
+  <div class="btn-medium">
+    <%= link_to 'View All', listings_path %>
+  </div>
+</div>
