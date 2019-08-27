@@ -21,26 +21,27 @@
 }
 
 .btn-medium {
-  background-color: white;
+  background-color: gray;
   border: 1px solid #DFDFDF;
   color: #DFDFDF;
   border-radius: 38px;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: lighter;
-  width: 20%;
   margin: 70px auto;
+  text-align: center;
   a {
-    color: #999999;
+    color: #ebe7e7;
     text-decoration: none;
     text-align: center;
   }
 }
 
 .btn-medium:hover {
-  color: #999999;
+  color: #ebe7e7;
   border: 1px solid #999999;
   transition: 0.3s;
+  text-decoration: none;
 }
 .btn-ghost {
   color: white;

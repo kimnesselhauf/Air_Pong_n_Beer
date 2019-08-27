@@ -1,18 +1,13 @@
-<h1> Update Profile here:</h1>
-
-<%= simple_form_for @user, url: user_path do |u| %>
-<%= u.label :first_name %>
-<%= u.text_field :first_name %>
-<br>
-<%= u.label :last_name %>
-<%= u.text_field :last_name %>
-<br>
-<%= u.label :bio %>
-<%= u.text_field :bio %>
-<br>
-<%= u.input :photo %>
-<br>
-<%= u.submit %>
-<% end %>
-<%= link_to 'back', user_path %>
-
+<div class="bg-pic py-5">
+  <div class="booking-form px-5" style="text-align: left;">
+    <h6 class="listing-title">Update your profile here</h6>
+      <%= simple_form_for @user, url: user_path do |u| %>
+        <%= u.input :first_name %>
+        <%= u.input :last_name %>
+        <%= u.input :bio %>
+        <%= u.input :photo %>
+        <%= u.button :submit, class: 'btn-medium mt-3'%>
+      <% end %>
+      <%= link_to 'Back', user_path, class: 'btn-medium'%>
+  </div>
+</div>
