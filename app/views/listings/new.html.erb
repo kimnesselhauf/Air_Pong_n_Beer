@@ -1,7 +1,7 @@
 <h1>Create your new Listing here</h1>
 
 
-<%= simple_form_for [@user, @listing] do |l| %>
+<%= simple_form_for [@user, @listing], url: new_listing_path(@listing) do |l| %>
 <%= l.label :name %>
 <%= l.text_field :title %>
 <br>
