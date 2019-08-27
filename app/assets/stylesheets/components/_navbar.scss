@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Raleway';
 
   .navbar-collapse {
     flex-grow: 0;
@@ -13,13 +13,13 @@
 
   .nav-link {
     display: inline;
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Raleway';
   }
 
   &.navbar-transparent {
     background-color: transparent;
 
-    img {
+    .logo {
       filter: invert(1);
     }
 
