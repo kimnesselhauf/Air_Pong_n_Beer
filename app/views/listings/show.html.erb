@@ -10,6 +10,19 @@
   <div class="btn-medium">
     <%= link_to 'View All', listings_path %>
   </div>
+<<<<<<< HEAD
+=======
+<div>
+  <h3>Make a booking</h3>
+
+  <%= simple_form_for [@listing, @booking] do |l| %>
+  <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
+  <br>
+  <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
+  <br>
+  <%= l.submit %>
+  <% end %>
+>>>>>>> 7065ca7261899ab52bbef752ecbfd7dd0d061783
 </div>
 
   <h3>Make a booking</h3>
