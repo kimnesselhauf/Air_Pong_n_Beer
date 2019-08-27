@@ -1,0 +1,40 @@
+<h1>Profile page</h1>
+
+
+<% if @user.photo.nil? %>
+   <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="#">
+  <% else %>
+    <%= image_tag @user.photo_url%>
+  <% end %>
+
+  <% if @user.first_name.nil? %>
+    <% %>
+  <% else %>
+    <p><%= @user.first_name %></p>
+  <% end %>
+
+  <% if @user.last_name.nil? %>
+    <% %>
+  <% else %>
+    <p><%= @user.last_name %></p>
+  <% end %>
+
+<br>
+
+  <p><%= @user.email %></p>
+
+  <% if @user.bio.nil? %>
+    <% %>
+  <% else %>
+    <p><%= @user.bio %></p>
+  <% end %>
+
+<%= link_to 'create listing', new_listing_path %>
+<br>
+<%= link_to 'Update profile', edit_user_path %>
+<br>
+<%= link_to 'back', root_path %>
+
+
+
+

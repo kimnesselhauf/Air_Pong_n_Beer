@@ -24,8 +24,9 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Reserve a Table", "#", class: "dropdown-item" %>
-            <%= link_to "List my Table", "#", class: "dropdown-item" %>
+            <%= link_to "Go to Profile", user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Reserve a Table", listings_path, class: "dropdown-item" %>
+            <%= link_to "List my Table", new_listing_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

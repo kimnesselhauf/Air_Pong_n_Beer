@@ -1,0 +1,18 @@
+<h1> Update Profile here:</h1>
+
+<%= simple_form_for @user, url: user_path do |u| %>
+<%= u.label :first_name %>
+<%= u.text_field :first_name %>
+<br>
+<%= u.label :last_name %>
+<%= u.text_field :last_name %>
+<br>
+<%= u.label :bio %>
+<%= u.text_field :bio %>
+<br>
+<%= u.input :photo %>
+<br>
+<%= u.submit %>
+<% end %>
+<%= link_to 'back', user_path %>
+
