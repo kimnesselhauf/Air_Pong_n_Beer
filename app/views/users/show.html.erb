@@ -1,11 +1,6 @@
 <h1>Profile page</h1>
 
-
-<% if @user.photo.nil? %>
-   <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="#">
-  <% else %>
-    <%= image_tag @user.photo_url%>
-  <% end %>
+  <%= cl_image_tag current_user.photo_or_default %>
 
   <% if @user.first_name.nil? %>
     <% %>
