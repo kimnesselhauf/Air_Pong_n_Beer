@@ -3,6 +3,8 @@
   justify-content: center; // or `flex-start`
   font-size: 18px;
   color: black;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 3px;
 }
 
 .form-bg {
@@ -15,6 +17,8 @@
   margin: 0px 200px;
   padding: 12px;
   border-radius: 58px;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 2px;
 }
 .form-title {
   text-align: center;
@@ -23,6 +27,7 @@
   color: black;
   display: block;
   opacity: 1;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 .form-actions  {
