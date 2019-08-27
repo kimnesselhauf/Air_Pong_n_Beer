@@ -1,62 +1,12 @@
-<h1>Create your new Listing here</h1>
-
-
-<%= simple_form_for [@user, @listing], url: new_listing_path(@listing) do |l| %>
-<%= l.label :name %>
-<%= l.text_field :title %>
-<br>
-<%= l.label :description %>
-<%= l.text_field :description %>
-<br>
-<%= l.label :price %>
-<%= l.text_field :price %>
-<br>
-<%= l.input :photo %>
-<br>
-<%= l.submit %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<% end %>
-
-
-
-
-
+<div class="bg-light py-5">
+  <div class="booking-form px-5" style="text-align: left;">
+    <h6 class="listing-title">Rent out your table here</h6>
+    <%= simple_form_for [@user, @listing], url: new_listing_path(@listing) do |l| %>
+        <%= l.input :title, label: "Name" %>
+        <%= l.input :description %>
+        <%= l.input :price %>
+        <%= l.input :photo %>
+        <%= l.button :submit, class: 'btn-booking'%>
+    <% end %>
+  </div>
+</div>
