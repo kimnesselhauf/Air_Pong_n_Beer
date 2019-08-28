@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.listing = @listing
     if @booking.save
-      redirect_to @listing.user
+      redirect_to current_user
     else
       render :new
     end
