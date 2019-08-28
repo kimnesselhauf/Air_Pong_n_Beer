@@ -1,15 +1,23 @@
-<h2>Confirm booking</h2>
+<div class="form-bg pt-5">
+  <div class="form">
+    <h2 class="form-title">Confirm booking</h2>
+    <div class="flex-container">
+      <div class="form-inputs">
+        <img src="<%= @listing.photo %>" alt="#" width="300px">
+        <h4><%= @listing.title %></h4>
+        <p>From: <%= @booking.pickup_on %></p>
+        <p>Till: <%= @booking.return_on %></p>
+        <p>Location: <%= current_user.location %></p>
+        <p>Note to vendor: <%= @booking.note %></p>
 
-<div>
-  <img src="<%= @listing.photo %>" alt="#">
-  <h4><%= @listing.title %></h4>
-  <br>
-  <p>From <%= @booking.pickup_on %></p>
-  <p>Till <%= @booking.return_on %></p>
-  <p>Location: <%= current_user.location %></p>
-  <p>Note to vendor: <%= @booking.note %></p>
+        <%= link_to 'Confrim', current_user, class: 'btn-booking' %>
+
+        <div class="links">
+        <%= link_to 'Edit',  edit_listing_booking_path(@listing, @booking) %>
+        <%= link_to 'Cancel', listing_booking_path(@listing, @booking), method: :delete %>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to 'Confrim', current_user %>
-<%= link_to 'Edit',  edit_listing_booking_path(@listing, @booking) %>
-<%= link_to 'Cancel', listing_booking_path(@listing, @booking), method: :delete %>
