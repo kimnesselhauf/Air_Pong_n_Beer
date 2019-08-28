@@ -6,3 +6,64 @@ body {
   color: gray;
 }
 
+.section {
+  width: 86%;
+  max-width: 1240px;
+  margin: 64px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-content {
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 40px;
+  max-width: 525px;
+
+  h2 {
+    font-family: 'Graduate';
+    font-weight: 800;
+    font-size: 3rem;
+  }
+  p {
+    display: block;
+    font-weight: 400;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+.section-img {
+  margin: 0;
+  width: 50%;
+  max-height: 454px;
+  margin: 20px auto;
+}
+
+.cta {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta-inner {
+  width: 86%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 16px 0;
+    font-family: 'Graduate';
+    font-weight: 800;
+    text-align: center;
+  }
+
+  a {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+}

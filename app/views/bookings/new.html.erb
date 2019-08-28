@@ -1,11 +1,12 @@
-<h1>Make a booking</h1>
-
-
-<%= simple_form_for [@listing, @booking] do |l| %>
-<%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
-<br>
-<%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" } %>
-<br>
-<%= l.submit %>
-<% end %>
-
+<div class="bg-light py-5">
+  <div class="booking-form">
+    <h3 class="listing-title">Make a booking</h3>
+    <%= simple_form_for [@listing, @booking] do |l| %>
+      <div class="form-row">
+        <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+        <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+      </div>
+        <%= l.button :submit, class: 'btn-booking'%>
+    <% end %>
+  </div>
+</div>
