@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .banner {
   background-size: cover;
   background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));

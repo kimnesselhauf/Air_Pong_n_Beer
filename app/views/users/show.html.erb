@@ -1,85 +1,82 @@
-<h1>Profile page</h1>
+<div class="bg-pic py-5">
+  <div class="booking-form px-5" style="text-align: left; max-width: 847px;">
+    <h6 class="listing-title">Profile page</h6>
 
-  <%= cl_image_tag current_user.photo_or_default %>
+    <div class="center" style="text-align: center;">
+      <%= cl_image_tag current_user.photo_or_default, width: "250px"%>
+    </div>
 
     <% if @user.first_name.nil? %>
       <% %>
     <% else %>
-      <p><%= @user.first_name %></p>
+      <p>First Name: <%= @user.first_name %></p>
     <% end %>
 
     <% if @user.last_name.nil? %>
       <% %>
     <% else %>
-      <p><%= @user.last_name %></p>
+      <p>Last Name: <%= @user.last_name %></p>
     <% end %>
 
-<br>
+    <p>Email: <%= @user.email %></p>
 
-  <p><%= @user.email %></p>
+    <% if @user.bio.nil? %>
+      <% %>
+    <% else %>
+      <p>Bio: <%= @user.bio %></p>
+    <% end %>
 
-  <% if @user.bio.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.bio %></p>
-  <% end %>
+    <div class="space-between">
+      <%= link_to 'Update Profile', edit_user_path, class: 'btn-medium' %>
+      <%= link_to 'Back', root_path, class: 'btn-medium' %>
+    </div>
 
-<<<<<<< HEAD
-<br>
-   <h2>My bookings</h2> <%= link_to 'Book now', listings_path %>
-   <br>
+    <hr>
+
+    <div class="space-between">
+      <h2>My Bookings</h2><span>
+      <%= link_to 'New Booking', listings_path, class: 'btn-booking' %></span>
+    </div>
 
     <% if @user.bookings.empty? %>
-      <p>You have no current bookings open </p>
+      <p>Sorry, you have no any bookings.</p>
     <% else %>
       <% @user.bookings.each do |booking| %>
-            <img src="<%= booking.listing.photo %>" alt="#">
-          <br>
-            <%= "Table name:" %><%= booking.listing.title %>
-          <br>
-            <%= "Pick date: " %><%= booking.pickup_on %>
-          <br>
-            <%= "Return date: " %> <%= booking.return_on %>
-          <br>
-            <%= "Pickup address: " %>
-          <br>
-            <%= "Vendor: " %>
-            <%= booking.listing.user.first_name %>
-            <%= booking.listing.user.last_name %>
-          <br>
-            <%= "Email: " %>
-            <%= booking.listing.user.email %>
+      <br>
+        <p><strong>Table name: <%= booking.listing.title %></strong><p>
+        <p>Pickup date: <%= booking.pickup_on %></p>
+        <p>Return date: <%= booking.return_on %></p>
+        <p>Pickup Location: Richmond</p>
+        <p>Vendor:
+          <%= booking.listing.user.first_name %>
+          <%= booking.listing.user.last_name %></p>
+        <p>Email: <%= booking.listing.user.email %></p>
+        <%= link_to "View Booking", listing_path, class: 'btn-medium' %>
         <br>
-            <%= link_to "Booking confirmation", listing_path %>
       <% end %>
     <% end %>
-<br>
-   <h2>My listings</h2><%= link_to 'create new listing', new_listing_path %>
+    <br>
+    <hr>
+    <br>
+    <div class="space-between" style="font-size: 24px;">
+      <h2>My Listings</h2> <span><%= link_to 'Create New Listing', new_listing_path, class: 'btn-booking' %></span>
+    </div>
 
-     <% if @user.listings.empty? %>
-        <p>You have no current listing </p>
-      <% else %>
-        <% @user.listings.each do |listing| %>
-          <div class="card-product-container pt-5">
-            <div class="card-product">
-              <img src="<%= listing.photo %>" alt="#">
-              <div class="card-product-infos">
-                <h1><%= listing.title %></h1>
-                <h4><%= listing.description %></h4>
-                <p>$<%= listing.price %></p>
-              </div>
+   <% if @user.listings.empty? %>
+      <p>You have no current listing </p>
+    <% else %>
+      <% @user.listings.each do |listing| %>
+        <div class="card-product-container">
+          <div class="card-listing">
+            <img src="<%= listing.photo %>" alt="#">
+            <div class="card-listing-infos">
+              <h4><%= listing.title %></h4>
+              <p><%= listing.description %></p>
+              <p>$<%= listing.price %></p>
             </div>
-              <%= link_to 'Delete Listing', user_path, method: :delete %>
           </div>
-        <% end %>
+        </div>
       <% end %>
-<br>
-<%= link_to 'Update profile', edit_user_path %>
-<br>
-<%= link_to 'back', root_path %>
-
-
-
-
-=======
->>>>>>> 7ae7d5de7df13aefdeaa78d9a1fa25691b596c87
+    <% end %>
+  </div>
+</div>
