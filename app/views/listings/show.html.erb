@@ -9,9 +9,6 @@
       </div>
     </div>
   </div>
-  <div class="btn-medium" style="max-width: 20%;">
-    <%= link_to 'View Other Tables', listings_path %>
-  </div>
   <div class="booking-form">
     <h3 class="listing-title">Make a booking</h3>
     <%= simple_form_for [@listing, @booking] do |l| %>
@@ -19,7 +16,8 @@
         <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
         <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
       </div>
-        <%= l.button :submit, class: 'btn-booking'%>
+        <%= l.button :submit, label: "Book Now", class: 'btn-booking' %>
     <% end %>
+        <%= link_to 'Go Back', listings_path, class: 'btn-booking' %>
   </div>
 </div>
