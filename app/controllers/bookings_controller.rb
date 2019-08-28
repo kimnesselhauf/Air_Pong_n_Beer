@@ -5,14 +5,18 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.find(params[:listing_id])
-    @booking = Booking.new(booking_params)
-    @booking.user = current_user
-    @booking.listing = @listing
-    if @booking.save
-      redirect_to listing_confirm_booking_path
+    if current_user.nil?
+      redirect_to new_user_registration_path
     else
-      render :new
+      @listing = Listing.find(params[:listing_id])
+      @booking = Booking.new(booking_params)
+      @booking.user = current_user
+      @booking.listing = @listing
+      if @booking.save
+        redirect_to listing_confirm_booking_path
+      else
+        render :new
+      end
     end
   end
 
