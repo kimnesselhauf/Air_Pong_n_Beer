@@ -7,7 +7,7 @@
         <h4><%= @listing.title %></h4>
         <p>From: <%= @booking.pickup_on %></p>
         <p>Till: <%= @booking.return_on %></p>
-        <p>Location: <%= current_user.location %></p>
+        <p>Location: <%= @listing.user.location %></p>
         <p>Note to vendor: <%= @booking.note %></p>
 
         <%= link_to 'Confrim', current_user, class: 'btn-booking' %>

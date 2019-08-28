@@ -43,10 +43,11 @@
     <% else %>
       <% @user.bookings.each do |booking| %>
       <br>
+        <img src="<%= booking.listing.photo %>" alt="#">
         <p><strong>Table name: <%= booking.listing.title %></strong><p>
         <p>Pickup date: <%= booking.pickup_on %></p>
         <p>Return date: <%= booking.return_on %></p>
-        <p>Pickup Location: Richmond</p>
+        <p>Pickup Location: <%= booking.listing.user.location %></p>
         <p>Vendor:
           <%= booking.listing.user.first_name %>
           <%= booking.listing.user.last_name %></p>
