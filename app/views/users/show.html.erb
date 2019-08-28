@@ -1,26 +1,82 @@
-<h1>Profile page</h1>
+<div class="bg-pic py-5">
+  <div class="booking-form px-5" style="text-align: left; max-width: 847px;">
+    <h6 class="listing-title">Profile page</h6>
 
-  <%= cl_image_tag current_user.photo_or_default %>
+    <div class="center" style="text-align: center;">
+      <%= cl_image_tag current_user.photo_or_default, width: "250px"%>
+    </div>
 
     <% if @user.first_name.nil? %>
       <% %>
     <% else %>
-      <p><%= @user.first_name %></p>
+      <p>First Name: <%= @user.first_name %></p>
     <% end %>
 
     <% if @user.last_name.nil? %>
       <% %>
     <% else %>
-      <p><%= @user.last_name %></p>
+      <p>Last Name: <%= @user.last_name %></p>
     <% end %>
 
-<br>
+    <p>Email: <%= @user.email %></p>
 
-  <p><%= @user.email %></p>
+    <% if @user.bio.nil? %>
+      <% %>
+    <% else %>
+      <p>Bio: <%= @user.bio %></p>
+    <% end %>
 
-  <% if @user.bio.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.bio %></p>
-  <% end %>
+    <div class="space-between">
+      <%= link_to 'Update Profile', edit_user_path, class: 'btn-medium' %>
+      <%= link_to 'Back', root_path, class: 'btn-medium' %>
+    </div>
 
+    <hr>
+
+    <div class="space-between">
+      <h2>My Bookings</h2><span>
+      <%= link_to 'New Booking', listings_path, class: 'btn-booking' %></span>
+    </div>
+
+    <% if @user.bookings.empty? %>
+      <p>Sorry, you have no any bookings.</p>
+    <% else %>
+      <% @user.bookings.each do |booking| %>
+      <br>
+        <p><strong>Table name: <%= booking.listing.title %></strong><p>
+        <p>Pickup date: <%= booking.pickup_on %></p>
+        <p>Return date: <%= booking.return_on %></p>
+        <p>Pickup Location: Richmond</p>
+        <p>Vendor:
+          <%= booking.listing.user.first_name %>
+          <%= booking.listing.user.last_name %></p>
+        <p>Email: <%= booking.listing.user.email %></p>
+        <%= link_to "View Booking", listing_path, class: 'btn-medium' %>
+        <br>
+      <% end %>
+    <% end %>
+    <br>
+    <hr>
+    <br>
+    <div class="space-between" style="font-size: 24px;">
+      <h2>My Listings</h2> <span><%= link_to 'Create New Listing', new_listing_path, class: 'btn-booking' %></span>
+    </div>
+
+   <% if @user.listings.empty? %>
+      <p>You have no current listing </p>
+    <% else %>
+      <% @user.listings.each do |listing| %>
+        <div class="card-product-container">
+          <div class="card-listing">
+            <img src="<%= listing.photo %>" alt="#">
+            <div class="card-listing-infos">
+              <h4><%= listing.title %></h4>
+              <p><%= listing.description %></p>
+              <p>$<%= listing.price %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
