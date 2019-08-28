@@ -1,0 +1,15 @@
+<h2>Confirm booking</h2>
+
+<div>
+  <img src="<%= @listing.photo %>" alt="#">
+  <h4><%= @listing.title %></h4>
+  <br>
+  <p>From <%= @booking.pickup_on %></p>
+  <p>Till <%= @booking.return_on %></p>
+  <p>Location: <%= current_user.location %></p>
+  <p>Note to vendor: <%= @booking.note %></p>
+</div>
+
+<%= link_to 'Confrim', current_user %>
+<%= link_to 'Edit',  edit_listing_booking_path(@listing, @booking) %>
+<%= link_to 'Cancel', listing_booking_path(@listing, @booking), method: :delete %>

@@ -5,6 +5,8 @@
       <div class="form-row">
         <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
         <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+        <br>
+        <%= l.input :note, as: :text, placeholder: 'Message for vendor' %>
       </div>
         <%= l.button :submit, class: 'btn-booking'%>
     <% end %>
