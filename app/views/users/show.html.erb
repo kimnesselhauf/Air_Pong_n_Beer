@@ -2,17 +2,17 @@
 
   <%= cl_image_tag current_user.photo_or_default %>
 
-  <% if @user.first_name.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.first_name %></p>
-  <% end %>
+    <% if @user.first_name.nil? %>
+      <% %>
+    <% else %>
+      <p><%= @user.first_name %></p>
+    <% end %>
 
-  <% if @user.last_name.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.last_name %></p>
-  <% end %>
+    <% if @user.last_name.nil? %>
+      <% %>
+    <% else %>
+      <p><%= @user.last_name %></p>
+    <% end %>
 
 <br>
 
@@ -23,6 +23,34 @@
   <% else %>
     <p><%= @user.bio %></p>
   <% end %>
+
+<br>
+   <h2>My bookings</h2>
+
+    <% if @user.bookings.empty? %>
+      <p>You have no current bookings open </p>
+    <% else %>
+      <% @user.bookings.each do |booking| %>
+        <%= "Table name:" %><%= booking.listing.title %>
+          <br>
+            <%= "Pick date: " %><%= booking.pickup_on %>
+          <br>
+            <%= "Return date: " %> <%= booking.return_on %>
+          <br>
+            <%= "Pickup address: " %>
+          <br>
+            <%= "Vendor: " %>
+            <%= booking.listing.user.first_name %>
+            <%= booking.listing.user.last_name %>
+          <br>
+            <%= "Email: " %>
+            <%= booking.listing.user.email %>
+        <br>
+            <%= link_to "Booking confirmation", listing_path %>
+      <% end %>
+    <% end %>
+<br>
+   <h2>My listings</h2>
 
 <%= link_to 'create listing', new_listing_path %>
 <br>
