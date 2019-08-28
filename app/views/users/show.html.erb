@@ -32,7 +32,9 @@
       <p>You have no current bookings open </p>
     <% else %>
       <% @user.bookings.each do |booking| %>
-        <%= "Table name:" %><%= booking.listing.title %>
+            <img src="<%= booking.listing.photo %>" alt="#">
+          <br>
+            <%= "Table name:" %><%= booking.listing.title %>
           <br>
             <%= "Pick date: " %><%= booking.pickup_on %>
           <br>
