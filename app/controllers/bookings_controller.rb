@@ -10,10 +10,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.listing = @listing
     if @booking.save
-      redirect_to current_user
+      redirect_to listing_confirm_booking_path
     else
       render :new
     end
+  end
+
+  def confirm
+    @listing = Listing.find(params[:listing_id])
+    @booking = @listing.bookings.last
   end
 
   private
