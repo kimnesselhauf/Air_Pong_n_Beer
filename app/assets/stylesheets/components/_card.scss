@@ -1,7 +1,8 @@
-.bg-light {
-  background: #8E0E00;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ .bg-light {
+  //background-color: white;
+    /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to top, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to top, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .bg-pic {
@@ -21,13 +22,13 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-  margin: 28px 0px;
+  box-shadow: 2px 2px 8px rgba(0,0,0.2,0.2);
+  margin: 12px;
 
   &:hover {
     transition: all .5s ease;
     position: relative;
-    top: -6px;
+    top: -10px;
   }
 }
 
@@ -59,6 +60,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  border-top-color: black;
 }
 
 .card-trip-infos .card-trip-user {
@@ -70,7 +72,7 @@
 
 .card-container {
   display: grid;
-  margin: 30px;
+  margin: 60px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
 }
@@ -150,6 +152,30 @@
   margin-left: 62px;
 
   h1, p {
+    font-family: "Graduate";
+  }
+}
+
+.card-listing {
+  margin: 32px;
+  overflow: hidden;
+  height: 50vh;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  img {
+  height: 100%;
+  width: 60%;
+  object-fit: center;
+  }
+}
+
+.card-listing .card-listing-infos {
+  padding: 16px;
+
+  h4{
     font-family: "Graduate";
   }
 }
