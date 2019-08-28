@@ -33,7 +33,7 @@ listing.save!
 listing = Listing.new(
   photo: open('app/assets/images/table2.jpg'),
   title: "Beer De Americano",
-  description: "Collapsible beer pong table, with a hint of patriotism. Americans ONLY",
+  description: "Collapsible beer pong table, with a hint of capitalism Americans ONLY",
   price: "160",
   rating: rand(1..5),
   user: users.sample
@@ -103,7 +103,7 @@ listing.save!
 listing = Listing.new(
   photo: open('app/assets/images/table9.jpeg'),
   title: "Glass Pong",
-  description: "Transfer here => *************3636",
+  description: "You break it, you buy it",
   price: "200",
   rating: rand(1..5),
   user: users.sample
