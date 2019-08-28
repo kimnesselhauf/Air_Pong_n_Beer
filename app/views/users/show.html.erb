@@ -2,17 +2,17 @@
 
   <%= cl_image_tag current_user.photo_or_default %>
 
-  <% if @user.first_name.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.first_name %></p>
-  <% end %>
+    <% if @user.first_name.nil? %>
+      <% %>
+    <% else %>
+      <p><%= @user.first_name %></p>
+    <% end %>
 
-  <% if @user.last_name.nil? %>
-    <% %>
-  <% else %>
-    <p><%= @user.last_name %></p>
-  <% end %>
+    <% if @user.last_name.nil? %>
+      <% %>
+    <% else %>
+      <p><%= @user.last_name %></p>
+    <% end %>
 
 <br>
 
@@ -23,35 +23,4 @@
   <% else %>
     <p><%= @user.bio %></p>
   <% end %>
-
-<div class="bg-pic py-5">
-  <div class="booking-form px-5" style="text-align: left;">
-    <h6 class="listing-title">My Profile</h6>
-
-      <%= cl_image_tag current_user.photo_or_default %>
-
-          <% if @user.first_name.nil? %>
-            <% %>
-          <% else %>
-             <p>First Name: <%= @user.first_name %></p>
-          <% end %>
-
-          <% if @user.last_name.nil? %>
-            <% %>
-          <% else %>
-            <p>Last Name: <%= @user.last_name %></p>
-          <% end %>
-
-            <p>Email: <%= @user.email %></p>
-
-    <% if @user.bio.nil? %>
-      <% %>
-    <% else %>
-      <p><%= @user.bio %></p>
-    <% end %>
-      <%= link_to 'Create Listing', new_listing_path, class: 'btn-medium' %>
-      <%= link_to 'Update Profile', edit_user_path, class: 'btn-medium' %>
-      <%= link_to 'Back', root_path, class: 'btn-medium'%>
-  </div>
-</div>
 
