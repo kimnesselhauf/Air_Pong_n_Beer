@@ -9,9 +9,6 @@
       </div>
     </div>
   </div>
-  <div class="btn-medium" style="max-width: 30%;">
-    <%= link_to 'View Other Tables', listings_path %>
-  </div>
   <div class="booking-form">
     <h3 class="listing-title">Make a booking</h3>
     <%= simple_form_for [@listing, @booking] do |l| %>
@@ -21,7 +18,8 @@
         <br>
         <%= l.input :note, as: :text, placeholder: 'Message for vendor' %>
       </div>
-        <%= l.button :submit, class: 'btn-booking'%>
+        <%= l.button :submit, label: "Book Now", class: 'btn-booking' %>
     <% end %>
+        <%= link_to 'Go Back', listings_path, class: 'btn-booking' %>
   </div>
 </div>

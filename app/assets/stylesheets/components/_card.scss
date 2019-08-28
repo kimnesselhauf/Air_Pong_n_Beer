@@ -1,7 +1,7 @@
 .bg-light {
-  background: #8e9eab;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .bg-pic {
@@ -10,17 +10,18 @@
 
 .listing-title {
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
   font-family: 'Graduate';
+  font-color: white;
   font-size: 52px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 10px;
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
   margin: 28px 0px;
 
   &:hover {
@@ -33,7 +34,7 @@
 .card-trip > img {
   height: 300px;
   width: 100%;
-  object-fit: cover;
+  object-fit: center;
 }
 
 .card-trip a {
@@ -110,11 +111,11 @@
 }
 
 .card-product {
-  margin: 30px;
+  margin: 77px;
   overflow: hidden;
-  height: 420px;
+  height: 550px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   text-align: left;
@@ -122,11 +123,12 @@
 
 .card-product img {
   height: 100%;
-  width: 420px;
-  object-fit: cover;
+  width: 60%;
+  object-fit: center;
 }
 
 .card-product h2 {
+  font-family: "Graduate";
   font-size: 32px;
   font-weight: bold;
   margin: 0;
@@ -146,4 +148,8 @@
 
 .card-product-infos {
   margin-left: 62px;
+
+  h1, p {
+    font-family: "Graduate";
+  }
 }
