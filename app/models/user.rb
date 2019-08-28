@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  DEFAULT_PHOTO = "https://kitt.lewagon.com/placeholder/users/ssaunier"
+  DEFAULT_PHOTO = "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fsvg%2F20161027%2Fservice_default_avatar_182956.png&f=1"
 
   mount_uploader :photo, PhotoUploader
 
