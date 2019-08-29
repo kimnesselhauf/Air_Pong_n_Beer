@@ -1,5 +1,5 @@
 <%= link_to listing, class: 'card-trip' do %>
-  <%= cl_image_tag listing.photo, width: 340, height: 280, crop: :fill %>
+  <%= cl_image_tag listing.photo, width: 600, height: 200, crop: "pad" %>
   <div class="card-trip-infos">
     <div>
       <h2><%= listing.title %></h2>
