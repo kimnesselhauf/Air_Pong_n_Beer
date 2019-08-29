@@ -13,7 +13,7 @@ const init_flatpickr = () => {
 
     flatpickr(".datepicker.datepicker-booking", {
       minDate: "today",
-      disable: JSON.parse(disabledDates),
+      disable: disabledDates && JSON.parse(disabledDates),
     });
   }
 };

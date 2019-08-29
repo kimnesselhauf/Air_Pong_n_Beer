@@ -3,6 +3,15 @@ Booking.destroy_all
 User.destroy_all
 Listing.destroy_all
 
+location = []
+  location << "14 Thomas Street, Melbourne"
+  location << "186 Lennox Street, Melbourne"
+  location << "31 Bell Street, Melbourne"
+  location << "13 Kelso Street, Melbourne"
+  location << "25 Wangaratta Street, Melbourne"
+  location << "53 Airlie Street, Melbourne"
+
+
 puts " creating 3 users..."
 3.times do |n|
   user = User.new(
@@ -11,7 +20,7 @@ puts " creating 3 users..."
      bio: Faker::Superhero.descriptor,
      email: "user#{n}@user.com",
      password: 123456,
-     location: Faker::Address.full_address
+     location: location.sample
   )
   user.save!
 end

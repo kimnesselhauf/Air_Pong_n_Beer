@@ -1,29 +1,33 @@
-<%= form_tag listings_path, method: :get do %>
-   <%= date_field_tag :pickup_on, '', as: :date, html5: true, class: "datepicker datepicker-search" %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
 
-<div class="bg-light py-5">
+<div class="bg-light">
+  <h1 class="listing-title">Tables</h1>
+  <span class="center-search-bar" style="text-align: center;">
+    <%= form_tag listings_path, method: :get do %>
+      <%= date_field_tag :pickup_on, '', as: :date, html5: true, class: "datepicker datepicker-search", placeholder: "Search a date to rent.."%>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </span>
+  <div class="main-container">
   <div
     id="map"
-    style="width: 100%;
-    height: 600px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-  <h1 class="listing-title">Tables</h1>
-  <div class="card-container">
-    <% @listings.each do |listing| %>
-      <%= link_to listing, class: 'card-trip' do %>
-        <%= cl_image_tag listing.photo, width: 340, height: 280, crop: :fill %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= listing.title %></h2>
-            <p><%= listing.description %></p>
+    <div class="card-container">
+      <% @listings.each do |listing| %>
+        <%= link_to listing, class: 'card-trip' do %>
+          <%= cl_image_tag listing.photo, width: 340, height: 280, crop: :fill %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= listing.title %></h2>
+              <p><%= listing.description %></p>
+            </div>
+            <h2 class="card-trip-pricing">$<%= listing.price %>/Day</h2>
           </div>
-          <h2 class="card-trip-pricing">$<%= listing.price %>/Day</h2>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
+
+
