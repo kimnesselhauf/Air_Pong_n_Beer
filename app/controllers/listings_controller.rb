@@ -3,6 +3,17 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
+
+    # @users = @listings.map do |listing|
+    #   listing.user
+    # end
+
+    @users_geo = User.geocoded #returns flats with coordinates
+     @markers = @users_geo.map do |location|
+       {
+         lat: location.latitude,
+         lng: location.longitude       }
+     end
   end
 
   def show

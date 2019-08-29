@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
+  before_action :find_listing, only: %i[new confirm create]
+
   def new
-    @listing = Listing.find(params[:listing_id])
     @booking = Booking.new
   end
 
@@ -8,7 +9,6 @@ class BookingsController < ApplicationController
     if current_user.nil?
       redirect_to new_user_registration_path
     else
-      @listing = Listing.find(params[:listing_id])
       @booking = Booking.new(booking_params)
       @booking.user = current_user
       @booking.listing = @listing
@@ -21,11 +21,19 @@ class BookingsController < ApplicationController
   end
 
   def confirm
-    @listing = Listing.find(params[:listing_id])
     @booking = @listing.bookings.last
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+  end
+
   private
+
+  def find_listing
+    @listing = Listing.find(params[:listing_id])
+  end
 
   def booking_params
     params.require(:booking).permit(:pickup_on, :return_on, :listing_id)
