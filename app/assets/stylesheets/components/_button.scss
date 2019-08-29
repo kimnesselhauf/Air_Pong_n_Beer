@@ -1,20 +1,21 @@
 .btn-booking {
-  background-color: #B31213;
+  background-color: #B22234;
   border: 1px solid #DFDFDF;
-  color: #DFDFDF;
+  color: white;
   border-radius: 38px;
   padding: 12px 28px;
   font-size: 14px;
   font-weight: bold;
   margin: 70px auto;
   text-align: center;
+  font-family: 'Graduate', cursive;
   a {
     color: white;
     text-decoration: none;
     text-align: center;
   }
   &:hover {
-    color: white;
+    color: #d9d5d5;
     border: 1px solid white;
     transition: 0.3s;
     text-decoration: none;
@@ -22,24 +23,25 @@
 }
 
 .btn-medium {
-  background-color: gray;
-  border: 1px solid #DFDFDF;
-  color: #DFDFDF;
+  background-color: #3C3B6E;
+  border: 1px solid #b6b2c4;
+  color: white;
   border-radius: 38px;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: lighter;
   margin: 70px auto;
   text-align: center;
+  font-family: 'Graduate', cursive;
   a {
-    color: #ebe7e7;
+    color: white;
     text-decoration: none;
     text-align: center;
   }
 }
 
 .btn-medium:hover {
-  color: #ebe7e7;
+  color: #e0e0ef;
   border: 1px solid #999999;
   transition: 0.3s;
   text-decoration: none;
@@ -50,13 +52,13 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 1;
   font-family: 'Graduate', cursive;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
+  opacity: 0.6;
   color: white;
   font-family: 'Graduate', cursive;
   font-weight: 300;
