@@ -9,11 +9,13 @@ class ListingsController < ApplicationController
     # end
 
     @users_geo = User.geocoded #returns flats with coordinates
-     @markers = @users_geo.map do |location|
-       {
-         lat: location.latitude,
-         lng: location.longitude       }
-     end
+    @markers = @users_geo.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        infoWindow: render_to_string(partial: "users/info", locals: { user: user })
+      }
+    end
   end
 
   def show
