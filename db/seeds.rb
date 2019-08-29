@@ -11,7 +11,7 @@ puts " creating 3 users..."
      bio: Faker::Superhero.descriptor,
      email: "user#{n}@user.com",
      password: 123456,
-     location: Faker::Nation.capital_city
+     location: Faker::Address.full_address
   )
   user.save!
 end
