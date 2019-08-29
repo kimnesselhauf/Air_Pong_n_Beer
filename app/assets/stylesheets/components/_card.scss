@@ -34,6 +34,31 @@
   font-weight: 500;
   padding: 10px;
 }
+
+.card-listing {
+  margin: 32px;
+  overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  img {
+  height: 100%;
+  width: 60%;
+  object-fit: center;
+  }
+}
+
+.card-listing .card-listing-infos {
+  padding: 16px;
+
+  h4{
+    font-family: "Graduate";
+  }
+}
+
 .card-trip {
   overflow: hidden;
   border-radius: 4px;

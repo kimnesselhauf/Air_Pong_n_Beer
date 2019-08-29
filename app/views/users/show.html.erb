@@ -42,7 +42,7 @@
       <p>Sorry, you have no any bookings.</p>
     <% else %>
       <% @user.bookings.each do |booking| %>
-        <%= render 'bookings/card', booking: booking %>
+        <%= render '/bookings/card', booking: booking %>
       <% end %>
     <% end %>
 
