@@ -3,7 +3,42 @@
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
 }
+
+.card-map {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  img {
+    height: 100%;
+    width: 80px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-family: 'Graduate';
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card-map-content {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
+}
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+
+
 
