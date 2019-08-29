@@ -12,8 +12,7 @@ class ListingsController < ApplicationController
      @markers = @users_geo.map do |location|
        {
          lat: location.latitude,
-         lng: location.longitude
-       }
+         lng: location.longitude       }
      end
   end
 
