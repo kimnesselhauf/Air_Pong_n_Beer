@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :listings do
-    resources :bookings, only: %i[new create edit update destroy]
+    resources :bookings, only: %i[new create edit update]
     get 'listings/:listing_id/bookings/confirm', to: 'bookings#confirm', as: 'confirm_booking'
   end
   resources :users
+  resources :bookings, only: [:destroy]
 
 end
