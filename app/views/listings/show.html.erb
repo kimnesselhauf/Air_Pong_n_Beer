@@ -1,25 +1,32 @@
-<div class="bg-light py-5">
-  <div class="card-product-container pt-5">
-    <div class="card-product">
-      <img src="<%= @listing.photo %>" alt="#">
-      <div class="card-product-infos">
-        <h1><%= @listing.title %></h1>
-        <h4><%= @listing.description %></h4>
-        <p>$<%= @listing.price %></p>
-        <p><%= @listing.user.location %></p>
+<div class="py-5">
+  <div class="listing-show-container">
+    <div class="booking-form" style="text-align: left;">
+    <%= cl_image_tag @listing.photo, width: 300, height: 250, crop: :pad %>
+      <h6 class="card-title">
+        <%= @listing.title %>
+      </h6>
+      <h6 class="card-subtitle mb-2 text-mute">
+        Price: $<%= @listing.price %>/Day</h6>
+      <p class="card-text mb-0">
+        Description: <%= @listing.description %>
+      </p>
+      <p class="card-text">
+        Location: <%= @listing.user.location %>
+      </p>
+    </div>
+    <div class="card mr-5">
+      <div class="booking-form">
+        <h3 class="listing-title">Make a booking</h3>
+        <%= simple_form_for [@listing, @booking], html: { 'data-disabled-dates': @listing.booked_dates.to_json } do |l| %>
+          <div class="form-row">
+            <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+            <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+            <%= l.input :note, as: :text, placeholder: 'Message for vendor...', wrapper_html: { class: 'col-md-12' } %>
+          </div>
+            <%= l.button :submit, label: "Book Now", class: 'btn-booking' %>
+            <%= link_to 'Go Back', listings_path, class: 'btn-booking' %>
+        <% end %>
       </div>
     </div>
-  </div>
-  <div class="booking-form">
-    <h3 class="listing-title">Make a booking</h3>
-    <%= simple_form_for [@listing, @booking], html: { 'data-disabled-dates': @listing.booked_dates.to_json } do |l| %>
-      <div class="form-row">
-        <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker datepicker-booking" }, wrapper_html: { class: 'col-md-6' } %>
-        <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker datepicker-booking" }, wrapper_html: { class: 'col-md-6' } %>
-        <%= l.input :note, as: :text, placeholder: 'Message for vendor...', wrapper_html: { class: 'col-md-12' } %>
-      </div>
-        <%= l.button :submit, label: "Book Now", class: 'btn-booking' %>
-    <% end %>
-        <%= link_to 'Go Back', listings_path, class: 'btn-booking' %>
   </div>
 </div>
