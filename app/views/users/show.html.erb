@@ -42,6 +42,7 @@
       <p>Sorry, you have no any bookings.</p>
     <% else %>
       <% @user.bookings.each do |booking| %>
+<<<<<<< HEAD
       <br>
 
         <img src="<%= booking.listing.photo %>" alt="#">
@@ -72,12 +73,13 @@
             </div>
           </div>
         </div>
+=======
+        <%= render '/bookings/card', booking: booking %>
+>>>>>>> b6d7b520a54b98c46b48279954234439b6c1a889
       <% end %>
     <% end %>
 
-    <br>
     <hr>
-    <br>
 
     <div class="space-between" style="font-size: 24px;">
       <h2>My Listings</h2> <span><%= link_to 'Create New Listing', new_listing_path, class: 'btn-booking' %></span>
@@ -87,14 +89,9 @@
       <p>You have no current listing </p>
     <% else %>
       <% @user.listings.each do |listing| %>
-        <div class="card-product-container">
-          <div class="card-listing">
-            <img src="<%= listing.photo %>" alt="#">
-            <div class="card-listing-infos">
-              <h4><%= listing.title %></h4>
-              <p><%= listing.description %></p>
-              <p>$<%= listing.price %></p>
-            </div>
+        <div>
+          <div class="card-listing-container">
+          <%= render '/listings/card', listing: listing %>
           </div>
         </div>
       <% end %>
