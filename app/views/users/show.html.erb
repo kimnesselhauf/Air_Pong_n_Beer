@@ -42,7 +42,40 @@
       <p>Sorry, you have no any bookings.</p>
     <% else %>
       <% @user.bookings.each do |booking| %>
+<<<<<<< HEAD
+      <br>
+
+        <img src="<%= booking.listing.photo %>" alt="#">
+        <p><strong>Table name: <%= booking.listing.title %></strong><p>
+        <p>Pickup date: <%= booking.pickup_on %></p>
+        <p>Return date: <%= booking.return_on %></p>
+        <p>Pickup Location: <%= booking.listing.user.location %></p>
+        <p>Vendor:
+          <%= booking.listing.user.first_name %>
+          <%= booking.listing.user.last_name %></p>
+        <p>Email: <%= booking.listing.user.email %></p>
+        <%= link_to "Cancel Booking", booking_path(booking), method: :delete, class: 'btn-medium' %>
+        <br>
+
+        <div class="card-product-container">
+          <div class="card-listing">
+            <img src="<%= booking.listing.photo %>" alt="#" width="200px">
+            <div class="card-listing-infos">
+              <p><strong>Table name: <%= booking.listing.title %></strong><p>
+              <p>Pickup date: <%= booking.pickup_on %></p>
+              <p>Return date: <%= booking.return_on %></p>
+              <p>Pickup Location: <%= booking.listing.user.location %></p>
+              <p>Vendor:
+                <%= booking.listing.user.first_name %>
+                <%= booking.listing.user.last_name %></p>
+              <p>Email: <%= booking.listing.user.email %></p>
+              <br>
+            </div>
+          </div>
+        </div>
+=======
         <%= render '/bookings/card', booking: booking %>
+>>>>>>> b6d7b520a54b98c46b48279954234439b6c1a889
       <% end %>
     <% end %>
 
