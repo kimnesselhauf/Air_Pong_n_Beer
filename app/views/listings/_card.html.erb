@@ -1,0 +1,10 @@
+<%= link_to listing, class: 'card-trip' do %>
+  <%= cl_image_tag listing.photo, width: 340, height: 280, crop: :fill %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= listing.title %></h2>
+      <p><%= listing.description %></p>
+    </div>
+    <h2 class="card-trip-pricing">$<%= listing.price %>/Day</h2>
+  </div>
+<% end %>

@@ -1,0 +1,6 @@
+<span class="center-search-bar text-center">
+  <%= form_tag listings_path, method: :get do %>
+    <%= date_field_tag :pickup_on, '', as: :date, html5: true, class: "datepicker datepicker-search", placeholder: "Search a date to rent.."%>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</span>
