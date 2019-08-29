@@ -11,6 +11,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
   def photo_or_default
     photo.present? ? photo : DEFAULT_PHOTO
   end
