@@ -1,3 +1,8 @@
+<%= form_tag listings_path, method: :get do %>
+   <%= date_field_tag :pickup_on, '', as: :date, html5: true, class: "datepicker datepicker-search" %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="bg-light py-5">
   <h1 class="listing-title">Tables</h1>
   <div class="card-container">

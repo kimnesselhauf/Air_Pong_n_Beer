@@ -52,7 +52,7 @@
           <%= booking.listing.user.first_name %>
           <%= booking.listing.user.last_name %></p>
         <p>Email: <%= booking.listing.user.email %></p>
-        <%= link_to "View Booking", listing_path, class: 'btn-medium' %>
+        <%= link_to "Cancel Booking", booking_path(booking), method: :delete, class: 'btn-medium' %>
         <br>
       <% end %>
     <% end %>
