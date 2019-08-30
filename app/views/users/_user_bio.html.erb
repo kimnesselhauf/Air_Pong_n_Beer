@@ -1,0 +1,23 @@
+<div class="center" style="text-align: center;">
+  <%= cl_image_tag current_user.photo_or_default, width: "250px"%>
+</div>
+
+<% if @user.first_name.nil? %>
+  <% %>
+<% else %>
+  <p>First Name: <%= @user.first_name %></p>
+<% end %>
+
+<% if @user.last_name.nil? %>
+  <% %>
+<% else %>
+  <p>Last Name: <%= @user.last_name %></p>
+<% end %>
+
+<p>Email: <%= @user.email %></p>
+
+<% if @user.bio.nil? %>
+  <% %>
+<% else %>
+  <p>Bio: <%= @user.bio %></p>
+<% end %>
