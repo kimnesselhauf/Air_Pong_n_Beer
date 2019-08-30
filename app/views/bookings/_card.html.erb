@@ -3,6 +3,7 @@
     <img src="<%= booking.listing.photo %>" alt="#" width="200px">
     <div class="card-listing-infos">
       <p><strong>Table name: <%= booking.listing.title %></strong><p>
+      <p><strong>Total Price: $<%= (booking.listing.price.to_i * (booking.return_on - booking.pickup_on).to_i ) %></strong></p>
       <p>Pickup date: <%= booking.pickup_on %></p>
       <p>Return date: <%= booking.return_on %></p>
       <p>Pickup Location: <%= booking.listing.user.location %></p>
