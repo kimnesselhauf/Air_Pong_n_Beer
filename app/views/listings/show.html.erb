@@ -1,23 +1,25 @@
-<div class="py-5">
-  <div class="listing-show-container">
-    <div class="booking-form" style="text-align: left;">
-    <%= cl_image_tag @listing.photo, width: 300, height: 250, crop: :pad %>
-      <h6 class="card-title">
-        <%= @listing.title %>
-      </h6>
-      <h6 class="card-subtitle mb-2 text-mute">
-        Price: $<%= @listing.price %>/Day</h6>
-      <p class="card-text mb-0">
-        Description: <%= @listing.description %>
-      </p>
-      <p class="card-text">
-        Location: <%= @listing.user.location %>
-      </p>
-      <br>
-      <%= link_to 'View other tables', listings_path, class: 'btn-medium' %>
-    </div>
-    <div class="card mr-5">
-      <%= render 'form_booking' %>
+<div class="booking-background">
+  <div class="py-5">
+    <div class="listing-show-container">
+      <div class="booking-form" style="text-align: left;">
+      <%= cl_image_tag @listing.photo, width: 300, height: 250, crop: :pad %>
+        <h6 class="card-title">
+          <%= @listing.title %>
+        </h6>
+        <h6 class="card-subtitle mb-2 text-mute">
+          Price: $<%= @listing.price %>/Day</h6>
+        <p class="card-text mb-0">
+          Description: <%= @listing.description %>
+        </p>
+        <p class="card-text">
+          Location: <%= @listing.user.location %>
+        </p>
+        <br>
+        <%= link_to 'View other tables', listings_path, class: 'btn-medium' %>
+      </div>
+      <div class="card mr-5">
+        <%= render 'form_booking' %>
+      </div>
     </div>
   </div>
 </div>
