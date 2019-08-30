@@ -9,6 +9,7 @@
 .form-bg {
   height: 125vh;
   background-image: asset-url('form-bg.jpg');
+  background-attachment: fixed;
 }
 .booking-form {
   background: rgba(255,255,255,0.9);
@@ -32,6 +33,7 @@
 }
 .form-title {
   text-align: center;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
   margin-bottom: 50px;
   margin-top: 20px;
   display: block;
