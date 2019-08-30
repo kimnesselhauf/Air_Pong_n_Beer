@@ -7,16 +7,17 @@
 }
 
 .form-bg {
-  height: 125vh;
   background-image: asset-url('form-bg.jpg');
+  background-position: cover;
   background-attachment: fixed;
+  padding: 5rem 0;
 }
 .booking-form {
   background: rgba(255,255,255,0.9);
   margin: 0 auto;
   max-width: 640px;
   padding: 36px;
-  border-radius: 58px;
+  border-radius: 8px;
   font-family: 'Raleway';
   text-align: center;
 }
@@ -27,7 +28,7 @@
   margin: 0 auto;
   max-width: 640px;
   padding: 12px;
-  border-radius: 58px;
+  border-radius: 8px;
   font-family: 'Raleway';
   text-align: center;
 }
@@ -41,17 +42,23 @@
   font-family: 'Graduate';
 }
 
+.form-group {
+  text-align: left;
+  letter-spacing: 1px;
+}
+
 .form-actions  {
-  border: 1px solid black;
+  border: 1px solid #3C3B6E;
+  color: #3C3B6E;
   border-radius: 50px;
   font-weight: lighter;
   text-align: center;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 .form-actions:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .links {
@@ -66,10 +73,10 @@
   font-size: 12px;
   padding: 32px;
   opacity: 1;
+  color: #3C3B6E;
   }
 
   a:hover{
-  color: #4A4A4A;
   padding: 32px;
   text-decoration: none;
   opacity: 0.8;
