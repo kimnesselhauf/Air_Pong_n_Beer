@@ -2,6 +2,7 @@
   justify-content: space-between;
   background: white;
   font-family: 'Raleway';
+  padding: 2px 12px;
 
 .logo-name {
   display: inline;
@@ -12,6 +13,8 @@ a {
     color: white;
     text-decoration: none;
     background-color: transparent;
+    font-size: 1.15rem;
+    font-weight: 300;
 
   &:hover {
     transform: translateY(10%);
@@ -24,7 +27,10 @@ a {
   .navbar-collapse {
     flex-grow: 0;
   }
-
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
   .navbar-brand img {
     width: 40px;
   }
@@ -32,6 +38,7 @@ a {
   .nav-link {
     display: inline;
     font-family: 'Raleway';
+    padding: 0;
   }
 
   &.navbar-transparent {
