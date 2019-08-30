@@ -13,6 +13,8 @@
       <p class="card-text">
         Location: <%= @listing.user.location %>
       </p>
+      <br>
+      <%= link_to 'View other tables', listings_path, class: 'btn-medium' %>
     </div>
     <div class="card mr-5">
       <%= render 'form_booking' %>
