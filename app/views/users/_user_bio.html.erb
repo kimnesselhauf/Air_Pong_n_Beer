@@ -1,23 +1,25 @@
 <div class="center" style="text-align: center;">
-  <%= cl_image_tag current_user.photo_or_default, width: "250px"%>
-</div>
+      <%= cl_image_tag current_user.photo_or_default, width: "150px"%>
+    </div>
 
-<% if @user.first_name.nil? %>
-  <% %>
-<% else %>
-  <p>First Name: <%= @user.first_name %></p>
-<% end %>
+    <div id= "profile-info">
+      <% if @user.first_name.nil? %>
+        <% %>
+      <% else %>
+        <p><strong>First Name: </strong><%= @user.first_name %></p>
+      <% end %>
 
-<% if @user.last_name.nil? %>
-  <% %>
-<% else %>
-  <p>Last Name: <%= @user.last_name %></p>
-<% end %>
+      <% if @user.last_name.nil? %>
+        <% %>
+      <% else %>
+        <p><strong>Last Name: </strong><%= @user.last_name %></p>
+      <% end %>
 
-<p>Email: <%= @user.email %></p>
+      <p><strong>Email: </strong><%= @user.email %></p>
 
-<% if @user.bio.nil? %>
-  <% %>
-<% else %>
-  <p>Bio: <%= @user.bio %></p>
-<% end %>
+      <% if @user.bio.nil? %>
+        <% %>
+      <% else %>
+        <p><strong>Bio: </strong><%= @user.bio %></p>
+      <% end %>
+    </div>
