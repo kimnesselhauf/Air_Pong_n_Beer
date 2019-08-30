@@ -2,11 +2,11 @@ class ListingsController < ApplicationController
   before_action :find_listing, only: %i[show edit update destroy]
 
   def index
-    @listings = Listing.all
-
-    # @users = @listings.map do |listing|
-    #   listing.user
-    # end
+    if params[:pickup_on].present? && params[:return_on].present?
+      @listings = Listing.available_on_dates([params[:pickup_on], params[:return_on]])
+    else
+      @listings = Listing.all
+    end
 
     @users_geo = User.geocoded #returns flats with coordinates
     @markers = @users_geo.map do |user|
@@ -58,3 +58,19 @@ class ListingsController < ApplicationController
     params.require(:listing).permit(:photo, :title, :description, :price)
   end
 end
+
+
+# @listings_all = []
+      # @listings_all << Listing.all
+      # @booked_listings = []
+      # @trash = []
+      # @listings_all.each do |listing|
+      #   listing.bookings.each do |booking|
+      #     if booking.pickup_on.to_s == params[:pickup_on] && booking.return_on.to_s == params[:return_on]
+      #     raise
+      #       @booked_listings << booking
+      #     else
+      #       @trash << booking
+      #     end
+      #   end
+      # end
