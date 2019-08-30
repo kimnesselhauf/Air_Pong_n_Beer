@@ -3,6 +3,24 @@
   background: white;
   font-family: 'Raleway';
 
+.logo-name {
+  display: inline;
+  font-family: 'Graduate';
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+
+  &:hover {
+    transform: translateY(10%);
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+  }
+
+}
+
   .navbar-collapse {
     flex-grow: 0;
   }
@@ -29,5 +47,6 @@
   }
 }
 
-
-
+.dropdown-menu {
+  background: #410205;
+}
