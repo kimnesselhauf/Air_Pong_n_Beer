@@ -2,8 +2,8 @@
   <h3 class="listing-title">Make a booking</h3>
   <%= simple_form_for [@listing, @booking], html: { 'data-disabled-dates': @listing.booked_dates.to_json } do |l| %>
     <div class="form-row">
-      <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
-      <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker" }, wrapper_html: { class: 'col-md-6' } %>
+      <%= l.input :pickup_on, as: :date, html5: true, input_html: { class: "datepicker datepicker-booking" }, wrapper_html: { class: 'col-md-6' } %>
+      <%= l.input :return_on, as: :date, html5: true, input_html: { class: "datepicker datepicker-booking" }, wrapper_html: { class: 'col-md-6' } %>
       <%= l.input :note, as: :text, placeholder: 'Message for vendor...', wrapper_html: { class: 'col-md-12' } %>
     </div>
       <%= l.button :submit, label: "Book Now", class: 'btn-booking' %>
