@@ -2,8 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :listing
 
-  validates :pickup_on, presence: true, uniqueness: true
-  validates :return_on, presence: true, uniqueness: true
+  validates :pickup_on, presence: true
+  validates :return_on, presence: true
   validate :date_of_pickup_in_past
   validate :date_of_return_before_pickup
 
