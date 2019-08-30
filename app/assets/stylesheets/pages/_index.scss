@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-container {
+  display: flex;
+  justify-content: space-between;
+}
+

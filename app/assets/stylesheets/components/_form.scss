@@ -17,7 +17,7 @@
   margin: 0 auto;
   max-width: 640px;
   padding: 36px;
-  border-radius: 58px;
+  border-radius: 8px;
   font-family: 'Raleway';
   text-align: center;
   font-color: #011638;
@@ -48,11 +48,13 @@
 }
 .form-title {
   text-align: center;
+
   margin-top: 15px;
   display: block;
   opacity: 1;
   font-family: 'Graduate';
 }
+
 
 .booking-details{
   color: #3C3B6E;
@@ -79,20 +81,20 @@ a{
   border-color: rgba(60,59,110,0.5);
   margin: 15px;
   border-width: thin;
-
 }
 
 .form-actions  {
-  border: 1px solid black;
+  border: 1px solid #3C3B6E;
+  color: #3C3B6E;
   border-radius: 50px;
   font-weight: lighter;
   text-align: center;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 .form-actions:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .links {

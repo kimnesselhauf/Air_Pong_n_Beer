@@ -22,6 +22,8 @@ class BookingsController < ApplicationController
 
   def confirm
     @booking = @listing.bookings.last
+    @booking_length = (@booking.return_on - @booking.pickup_on).to_i
+    @total_price = @listing.price.to_i * @booking_length
   end
 
   def destroy

@@ -19,11 +19,10 @@
             </div>
           </div>
           <div id= "total-price">
-            <h3>Total Price: $<%= @listing.price %></h3>
+            <h3>Total Price: $<%= @total_price %></h3>
             <p>($<%= @listing.price %>/Day)</p>
           </div>
       </div>
-
       <div id = "form-confirmation-btn">
         <%= link_to 'Confrim', current_user, class: 'btn-booking' %>
       </div>
