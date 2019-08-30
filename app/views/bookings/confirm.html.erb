@@ -5,6 +5,7 @@
       <div class="form-inputs">
         <img src="<%= @listing.photo %>" alt="#" width="300px">
         <h4><%= @listing.title %></h4>
+        <p><strong>Total price: $<%= @total_price %></strong></p>
         <p>From: <%= @booking.pickup_on %></p>
         <p>Till: <%= @booking.return_on %></p>
         <p>Location: <%= @listing.user.location %></p>
