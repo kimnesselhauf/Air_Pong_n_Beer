@@ -2,7 +2,7 @@
 <%= link_to listing, class: 'card-map' do %>
     <div class="card-map-content">
       <%= cl_image_tag listing.photo, width: 150, height: 80, crop: "pad" %>
-      <h2><%= listing.title %></h2>
+      <h2>$<%= listing.price %>/Day</h2>
     </div>
     <% end %>
     <hr>
