@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
       if @booking.save
         redirect_to listing_confirm_booking_path
       else
-        render :new
+        render 'listings/show'
       end
     end
   end
