@@ -1,16 +1,16 @@
 .flex-container {
   display: flex;
-  justify-content: center; // or `flex-start`
+  justify-content: center;
+  flex-direction: column;
   font-size: 18px;
   font-family: 'Raleway';
   letter-spacing: 3px;
 }
 
 .form-bg {
-  background-image: asset-url('form-bg.jpg');
-  background-position: cover;
-  background-attachment: fixed;
-  padding: 5rem 0;
+  height: 125vh;
+  background-image: asset-url('party2.jpg');
+  background-size: cover;
 }
 .booking-form {
   background: rgba(255,255,255,0.9);
@@ -20,31 +20,67 @@
   border-radius: 8px;
   font-family: 'Raleway';
   text-align: center;
+  font-color: #011638;
 }
 
+#form-img {
+  margin: 10px;
+  width: 250px;
+  height: 200px;
+}
+
+#form-confirmation-btn{
+  margin: 20px;
+}
+
+#total-price{
+  margin:10px;
+}
 
 .form {
   background: rgba(255,255,255,0.8);
   margin: 0 auto;
-  max-width: 640px;
-  padding: 12px;
-  border-radius: 8px;
+  max-width: 740px;
+  padding: 10px;
+  border-radius: 4px;
   font-family: 'Raleway';
   text-align: center;
 }
 .form-title {
   text-align: center;
-  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-  margin-bottom: 50px;
-  margin-top: 20px;
+
+  margin-top: 15px;
   display: block;
   opacity: 1;
   font-family: 'Graduate';
 }
 
-.form-group {
+
+.booking-details{
+  color: #3C3B6E;
+  font-weight: 500;
+  opacity: 1;
+}
+
+a{
+  font-size: 12px;
+  padding: 12px;
+  opacity: 1;
+  font-weight: 450;
+  }
+
+#inbox-styling{
   text-align: left;
-  letter-spacing: 1px;
+  display: inline-flex;
+  padding-top:20px;
+}
+
+
+.form-inputs{
+  border: solid;
+  border-color: rgba(60,59,110,0.5);
+  margin: 15px;
+  border-width: thin;
 }
 
 .form-actions  {
@@ -71,13 +107,14 @@
 
   a{
   font-size: 12px;
-  padding: 32px;
+  padding: 12px;
   opacity: 1;
-  color: #3C3B6E;
+  font-weight: 450;
   }
 
   a:hover{
-  padding: 32px;
+  color: #4A4A4A;
+  padding: 12px;
   text-decoration: none;
   opacity: 0.8;
   }
@@ -87,3 +124,10 @@
   display: flex;
 }
 
+#card-align{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 20px;
+}

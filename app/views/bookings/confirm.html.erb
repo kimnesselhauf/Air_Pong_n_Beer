@@ -1,24 +1,37 @@
-<div class="form-bg pt-5">
+ <div class="form-bg pt-5">
   <div class="form">
-    <h2 class="form-title">Confirm booking</h2>
+    <h1 class="form-title">Let's get this Party started!</h1>
+    <p> (Please confirm your booking)</p>
     <div class="flex-container">
       <div class="form-inputs">
-        <img src="<%= @listing.photo %>" alt="#" width="300px">
-        <h4><%= @listing.title %></h4>
-        <p><strong>Total price: $<%= @total_price %></strong></p>
-        <p>From: <%= @booking.pickup_on %></p>
-        <p>Till: <%= @booking.return_on %></p>
-        <p>Location: <%= @listing.user.location %></p>
-        <p>Note to vendor: <%= @booking.note %></p>
-
+        <div id="inbox-styling">
+          <img id = "form-img"src="<%= @listing.photo %>" alt="#">
+            <div id= "card-align">
+                <h5><%= @listing.title %></h5>
+              <div class = "booking-details">
+                <p><strong>From: </strong><%= @booking.pickup_on %></p>
+                <p><strong>Till: </strong><%= @booking.return_on %></p>
+                <p><strong>Location: </strong><%= @listing.user.location %></p>
+                <% if @booking.note.present? %>
+                <p><strong>Note to vendor: </strong><%= @booking.note %></p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div id= "total-price">
+            <h3>Total Price: $<%= @total_price %></h3>
+            <p>($<%= @listing.price %>/Day)</p>
+          </div>
+      </div>
+      <div id = "form-confirmation-btn">
         <%= link_to 'Confrim', current_user, class: 'btn-booking' %>
+      </div>
 
-        <div class="links">
+      <div class="links">
         <%= link_to 'Edit',  edit_listing_booking_path(@listing, @booking) %>
         <%= link_to 'Cancel', listing_booking_path(@listing, @booking), method: :delete %>
-        </div>
-
       </div>
+
     </div>
   </div>
 </div>
