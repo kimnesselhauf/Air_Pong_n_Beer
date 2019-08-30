@@ -3,7 +3,10 @@
 }
 
 .bg-pic {
-  background-image: asset-url('form-bg.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), asset-url('player.jpg');
+  background-size: cover;
+  background-position: 100% 32%;
+  background-attachment: fixed;
 }
 
 .listing-title {
