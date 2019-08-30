@@ -1,12 +1,14 @@
-<div class="bg-light py-5">
-  <div class="booking-form px-5 text-left">
-    <h6 class="listing-title">Rent out your table here</h6>
-    <%= simple_form_for [@user, @listing], url: listings_path(@listing) do |l| %>
-        <%= l.input :title, label: "Name" %>
-        <%= l.input :description %>
-        <%= l.input :price %>
-        <%= l.input :photo %>
-        <%= l.button :submit, class: 'btn-booking'%>
-    <% end %>
+<div class= "booking-background">
+  <div class="py-5">
+    <div class="booking-form px-5 text-left">
+      <h6 class="listing-title">Rent out your table here</h6>
+      <%= simple_form_for [@user, @listing], url: listings_path(@listing) do |l| %>
+          <%= l.input :title, label: "Name" %>
+          <%= l.input :description %>
+          <%= l.input :price %>
+          <%= l.input :photo %>
+          <%= l.button :submit, class: 'btn-booking'%>
+      <% end %>
+    </div>
   </div>
 </div>
