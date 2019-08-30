@@ -1,9 +1,9 @@
 <div class="bg-pic py-5">
   <div class="booking-form px-5" style="text-align: left; max-width: 847px;">
-    <h6 class="listing-title">Profile</h6>
+    <h6 class="listing-title">My Player-Card</h6>
 
     <div class="center" style="text-align: center;">
-      <%= cl_image_tag current_user.photo_or_default, width: "250px"%>
+      <%= cl_image_tag current_user.photo_or_default, width: "150px"%>
     </div>
 
     <% if @user.first_name.nil? %>
